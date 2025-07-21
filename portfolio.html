@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ishani Das | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #121212, #1f2937);
+      color: #f9fafb;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1522199710521-72d69614c702?fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: #fff;
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+      position: relative;
+      animation: glowHeader 3s infinite alternate;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      animation: floatName 3s ease-in-out infinite;
+      text-shadow: 0 0 10px #0ea5e9;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1rem;
+      animation: fadeInUp 1s ease-out;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: #0ea5e9;
+      font-size: 2rem;
+      border-left: 5px solid #3b82f6;
+      padding-left: 0.8rem;
+    }
+    .section {
+      margin-bottom: 3rem;
+      animation: slideIn 1s ease-in-out;
+    }
+    .skills span {
+      display: inline-block;
+      background: #334155;
+      color: #f1f5f9;
+      padding: 0.4rem 0.8rem;
+      margin: 0.3rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+    .skills span:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #0ea5e9;
+      background-color: #0ea5e9;
+      color: #fff;
+    }
+    .project-card {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      margin-bottom: 2rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: rgba(14,165,233,0.2);
+      transform: skewX(-20deg);
+      transition: left 0.5s ease;
+    }
+    .project-card:hover::before {
+      left: 125%;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.8);
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #f9fafb;
+    }
+    .project-card p,
+    .project-card a {
+      color: #cbd5e1;
+    }
+    .project-card a {
+      display: inline-block;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .project-card a:hover {
+      color: #3b82f6;
+    }
+    .button {
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #0f172a;
+      color: #cbd5e1;
+      margin-top: 3rem;
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes glowHeader {
+      from { box-shadow: 0 0 10px #3b82f6; }
+      to { box-shadow: 0 0 30px #3b82f6; }
+    }
+    @keyframes floatName {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ishani Das</h1>
+  <p>I'm a final year B.Tech student passionate about web development</p>
+</header>
+
+<div class="container">
+
+  <section class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Java</span>
+      <span>MySQL</span>
+      <span>Git</span>
+      <span>Github</span>
+      <span>Node JS</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Abusive Comment Detection and Deletion on Live Chat</h3>
+      <p>This project uses JavaScript and Python to automatically detect and delete abusive comments in a live chat environment.</p>
+      <a href="https://is-hani.github.io/Abusive--Chat--Filter/" target="_blank">🔗 Live Demo</a>
+      <a href="https://github.com/Is-hani" target="_blank">🐱 GitHub</a>
+      <p><strong>Technologies:</strong> JavaScript, Python</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Resume</h2>
+    <a class="button" href="https://drive.google.com/file/d/1Ru6N6wXkRWXs0a-_2Ht1BTSUX4JgT_L9/view?usp=sharing" target="_blank">📄 Download Resume</a>
+  </section>
+
+  <section class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ishanidas760@gmail.com">ishanidas760@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Is-hani" target="_blank">github.com/Is-hani</a></p>
+    <p>LinkedIn: <a href="https:www.linkedin.com/in/ishani
+-das-0b0a7b29" target="_blank">linkedin.com/in/ishani
+-das-0b0a7b29</a></p>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Ishani Das</p>
+</footer>
+
+</body>
+</html>
